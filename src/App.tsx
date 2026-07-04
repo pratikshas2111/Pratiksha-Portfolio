@@ -130,7 +130,9 @@ function App(){
 
   return(
 
-    <div style={{maxWidth: '760px', margin:'0 auto', padding:'0 1.5rem'}}>
+    <div
+     style={{maxWidth: '760px', margin:'0 auto', 
+     padding:'0 1.5rem'}}>
       <Navbar />
       <Hero />
 

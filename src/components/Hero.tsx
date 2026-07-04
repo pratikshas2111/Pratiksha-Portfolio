@@ -1,54 +1,109 @@
-export default function Hero() {
-  return (
-    <section id="hero" style={{ padding: '4rem 0' }}>
-      <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-        <p style={{ marginBottom: '1rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-          Hi, I'm Pratiksha — a product designer crafting clean digital experiences.
-        </p>
+import React from 'react'
 
-        <h1 style={{ margin: '0 0 1.25rem', lineHeight: 1.05, fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          Designing thoughtful portfolios, websites, and brand-led interfaces.
-        </h1>
+const techPills = [
 
-        <p style={{ margin: '0 0 2rem', maxWidth: '38rem', color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-          I help creators and small teams launch memorable digital products with clarity, personality, and strong visual systems.
-        </p>
+  {label: 'C# /.NET Core', highlight:true},
+  {label: 'React', highlight: true},
+  {label: 'TypeScript', highlight: true},
+  {label: 'Oracle SQL', highlight: false},
+  {label: 'REST APIs', highlight: false},
+  {label: 'Clean Architecture', highlight: false},
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-          <a
-            href="#contact"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '0.95rem 1.5rem',
-              borderRadius: '999px',
-              backgroundColor: 'var(--accent)',
-              color: '#fff',
-              textDecoration: 'none',
-              fontWeight: 600,
-            }}
-          >
-            Work with me
-          </a>
-          <a
-            href="#projects"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '0.95rem 1.5rem',
-              borderRadius: '999px',
-              border: '1px solid var(--border)',
-              color: 'var(--text)',
-              textDecoration: 'none',
-              fontWeight: 600,
-            }}
-          >
-            See projects
-          </a>
-        </div>
-      </div>
+
+]
+export default function Hero()
+{
+  return(
+    <section style={{padding: '3.5rem 0 3rem'}}>
+
+<p style={{
+  fontFamily : 'var(--font-mono)',
+  fontSize: '12px',
+  color: 'var(--text-muted)',
+  marginBottom: '1.25rem'
+}}>
+  {'// '}
+  <span style ={{color:'var(--accent)'}}>src</span>
+  {'/'}
+  <span style={{color: 'var(--accent)'}}>engineers</span>
+  {'/'}
+  <span style={{color:'var(--accent)'}}>pratiksha-singh</span>
+
+
+</p>
+<h1 style={{
+  fontSize: '48px',
+  fontWeight: 600,
+  letterSpacing: '-2px',
+  lineHeight : 1.1,
+  marginBottom: '0.75rem'
+}}>
+ Pratiksha Singh
+</h1>
+<p style={{fontSize: '18px',
+  color: 'var(--text-muted)',
+  marginBottom: '1.75rem'
+}}>
+ .NET Full Stack Developer . Building with React + ASP.NET Core
+</p>
+<div style={{ display: 'flex', flexWrap: 'wrap',
+  gap:'8px', marginBottom: '2rem'
+}}>
+  {techPills.map((pill) =>(
+
+    <span
+     key={pill.label}
+     style={{
+      fontSize: '12px',
+      padding: '4px 14px',
+      borderRadius: '20px',
+      fontFamily: 'var(--font-mono)',
+      backgroundColor: pill.highlight? 'var(--accent-bg)' : 'var(--surface)',
+      color: pill.highlight ? 'var(--accent)' : 'var(--text-muted)',
+      border: `1px solid ${pill.highlight ? 'var(--accent)': 'var(--border)'}`,
+
+     }}
+    >
+   {pill.label}
+    </span>
+  ))}
+
+</div>
+
+<div style={{display: 'flex', gap: '12px'}}>
+  <a href="#projects">
+    <button style={
+      {
+        padding: '10px 24px',
+        borderRadius: '8px',
+        backgroundColor: 'var(--text)',
+        color: 'var(--bg)',
+        border: 'none',
+        fontWeight: 600,
+        fontSize: '14px',
+      }
+    }>
+      View Projects
+    </button>
+
+  </a>
+  <a href ="https://github.com/pratikshas2111" target="_blank" rel="noreferrer">
+  <button style={{
+    padding: '10px 20px',
+    borderRadius: '8px',
+    backgroundColor: 'transparent',
+    color: 'var(--text)',
+    border: '1px solid var(--border)',
+    fontSize: '14px',
+
+  }}>
+    GitHub → 
+
+  </button>
+
+  </a>
+
+</div>
     </section>
   )
 }
