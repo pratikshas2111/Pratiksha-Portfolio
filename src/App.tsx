@@ -125,6 +125,7 @@
 import './index.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Skills from './components/Skills'
 
 function App(){
 
@@ -135,6 +136,7 @@ function App(){
      padding:'0 1.5rem'}}>
       <Navbar />
       <Hero />
+      <Skills />
 
     </div>
   )
