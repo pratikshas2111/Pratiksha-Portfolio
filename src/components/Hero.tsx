@@ -34,7 +34,7 @@ export default function Hero() {
         lineHeight: 1.1,
         marginBottom: '0.75rem'
       }}>
-        Princy Singh
+        Pratiksha Singh
       </h1>
 
       <p style={{
