@@ -79,7 +79,7 @@ export default function Hero() {
           </button>
         </a>
 
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">
+        <a href="https://github.com/pratikshas2111" target="_blank" rel="noreferrer">
           <button style={{
             padding: '10px 20px',
             borderRadius: '8px',
@@ -90,6 +90,21 @@ export default function Hero() {
           }}>
             GitHub →
           </button>
+        </a>
+        {/*Add resume download button */}
+        <a href="/Pratiksha_Singh_Resume.pdf" download = "Pratiksha_Singh_Resume.pdf">
+        <button  style={{
+           padding: '10px 20px',
+           borderRadius: '8px',
+           backgroundColor: 'transparent',
+           color: 'var(--green)',
+           border: '1px solid var(--green)',
+           fontSize: '14px',
+           cursor: 'pointer',
+        }}>
+          Download Resume ↓
+          </button>
+
         </a>
       </div>
 
